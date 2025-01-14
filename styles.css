@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColabKids - Transformando o Diagnóstico Infantil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ColabKids</h1>
+            <p>Transformando o Diagnóstico Infantil com Tecnologia</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#funcionalidades">Funcionalidades</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="sobre">
+        <div class="container">
+            <h2>Bem-vindo à ColabKids</h2>
+            <p>Ajudamos profissionais e pais a transformar o diagnóstico e acompanhamento de crianças com dificuldades de aprendizado e comportamento.</p>
+        </div>
+    </section>
+
+    <section class="features" id="funcionalidades">
+        <div class="container">
+            <h2>Funcionalidades Principais</h2>
+            <div class="feature">
+                <h3>Colaboração Multidisciplinar</h3>
+                <p>Reúna psicólogos, professores, pediatras e outros especialistas para um diagnóstico integrado.</p>
+            </div>
+            <div class="feature">
+                <h3>Dashboard Interativo</h3>
+                <p>Acompanhe o progresso das crianças com gráficos claros e relatórios padronizados.</p>
+            </div>
+            <div class="feature">
+                <h3>Agendamento Simplificado</h3>
+                <p>Organize consultas e reuniões diretamente pela plataforma.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="contato">
+        <div class="container">
+            <h2>Quer saber mais?</h2>
+            <p><strong>Faça parte da revolução no diagnóstico infantil!</strong></p>
+            <button onclick="alert('Em breve, mais informações!')">Entre em Contato</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ColabKids. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
