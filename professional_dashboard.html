@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColabKids - Profissional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>ColabKids</h1>
+        </div>
+        <div class="logout">
+            <a href="index.html" class="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h2>Painel do Profissional</h2>
+
+            <form action="#" method="POST" class="session-form">
+                <h3>Registrar Evolução do Paciente</h3>
+
+                <label for="patient-name">Nome do Paciente:</label>
+                <input type="text" id="patient-name" name="patient-name" required>
+
+                <label for="session-date">Data da Sessão:</label>
+                <input type="date" id="session-date" name="session-date" required>
+
+                <label for="session-notes">Notas da Sessão:</label>
+                <textarea id="session-notes" name="session-notes" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Salvar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ColabKids. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
