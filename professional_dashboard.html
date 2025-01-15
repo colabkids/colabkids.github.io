@@ -35,6 +35,31 @@
                 <button type="submit" class="btn">Salvar</button>
             </form>
         </section>
+
+        <section class="appointments">
+            <h3>Agendamento e Controle de Consultas</h3>
+
+            <form action="#" method="POST" class="appointment-form">
+                <label for="appointment-patient">Nome do Paciente:</label>
+                <input type="text" id="appointment-patient" name="appointment-patient" required>
+
+                <label for="appointment-date">Data da Consulta:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+
+                <label for="appointment-time">Hora da Consulta:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+
+                <button type="submit" class="btn">Agendar</button>
+            </form>
+
+            <div class="appointment-list">
+                <h4>Consultas Agendadas</h4>
+                <ul>
+                    <li>Paciente: João Silva - Data: 15/01/2025 - Hora: 14:00</li>
+                    <li>Paciente: Maria Oliveira - Data: 16/01/2025 - Hora: 10:00</li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <footer>
