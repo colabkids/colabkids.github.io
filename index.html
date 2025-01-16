@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ColabKids</title>
+    <title>Login - ColabKids</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -27,7 +27,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: 50%;
-            opacity: 0.25; /* Aumentada para maior visibilidade */
+            opacity: 0.2;
             z-index: -1;
         }
 
@@ -45,26 +45,23 @@
             height: 40px;
         }
 
-        .login-link {
-            padding: 10px 20px;
-            background-color: white;
-            color: #4CAF50;
-            text-decoration: none;
-            border-radius: 5px;
+        .back-home {
             font-size: 16px;
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            padding: 10px 15px;
+            border-radius: 5px;
             font-weight: bold;
-            border: 2px solid #4CAF50;
-            transition: background-color 0.3s, color 0.3s;
-            margin-right: 30px; /* Espaçamento ajustado para 30px */
+            transition: background-color 0.3s;
         }
 
-        .login-link:hover {
-            background-color: #4CAF50;
-            color: white;
+        .back-home:hover {
+            background-color: #45a049;
         }
 
         main {
-            max-width: 90%;
+            max-width: 400px;
             margin: 50px auto;
             padding: 20px;
             background: white;
@@ -79,17 +76,41 @@
             margin-bottom: 20px;
         }
 
-        h2 {
-            font-size: 24px;
-            color: #4CAF50;
-            margin-top: 30px;
-            margin-bottom: 15px;
+        form {
+            margin-top: 20px;
         }
 
-        p {
-            font-size: 18px;
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
             margin-bottom: 20px;
-            line-height: 1.6;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
         }
 
         footer {
@@ -102,34 +123,18 @@
             width: 100%;
         }
 
-        .tool-section {
-            text-align: left;
-            margin-top: 20px;
-        }
-
-        .tool-section ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-
-        .tool-section ul li {
-            margin-bottom: 10px;
-        }
-
         @media (max-width: 768px) {
             h1 {
                 font-size: 24px;
             }
 
-            h2 {
-                font-size: 20px;
+            input[type="text"],
+            input[type="password"],
+            select {
+                font-size: 14px;
             }
 
-            p {
-                font-size: 16px;
-            }
-
-            .login-link {
+            button {
                 font-size: 14px;
                 padding: 8px 15px;
             }
@@ -145,25 +150,27 @@
         <div class="logo">
             <img src="./logo.png" alt="ColabKids Logo">
         </div>
-        <a href="login.html" class="login-link">Login</a>
+        <a href="index.html" class="back-home">Início</a>
     </header>
 
     <main>
-        <h1>Bem-vindo à ColabKids</h1>
-        <p><strong>Missão:</strong> Transformar o diagnóstico e acompanhamento de dificuldades de comportamento e aprendizado em crianças, oferecendo ferramentas tecnológicas inovadoras para profissionais, pais e professores.</p>
-        <p><strong>Visão:</strong> Ser referência em soluções colaborativas para o desenvolvimento infantil, promovendo um futuro melhor para as crianças e suas famílias.</p>
+        <h1>Login</h1>
+        <form action="dashboard.html" method="post">
+            <label for="user-type">Selecione o tipo de usuário:</label>
+            <select id="user-type" name="user-type" required>
+                <option value="parent">Pais</option>
+                <option value="professional">Profissionais de Saúde</option>
+                <option value="teacher">Professores</option>
+            </select>
 
-        <h2>Nossas Soluções</h2>
-        <div class="tool-section">
-            <p>Na ColabKids, oferecemos um conjunto de ferramentas para tornar o diagnóstico e acompanhamento mais eficiente e integrado:</p>
-            <ul>
-                <li><strong>Agendamento Online:</strong> Gerencie consultas de forma prática e centralizada.</li>
-                <li><strong>Plataforma Colaborativa:</strong> Compartilhe informações em tempo real entre profissionais, pais e professores.</li>
-                <li><strong>Relatórios Padronizados:</strong> Tenha acesso a relatórios completos e organizados, facilitando decisões clínicas.</li>
-                <li><strong>Atendimento Multidisciplinar:</strong> Conecte-se com diferentes especialistas para uma visão completa do caso.</li>
-                <li><strong>Histórico do Paciente:</strong> Registre e acompanhe a evolução de forma segura e detalhada.</li>
-            </ul>
-        </div>
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
     </main>
 
     <footer>
