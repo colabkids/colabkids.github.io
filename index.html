@@ -12,6 +12,12 @@
             padding: 0;
             background-color: #f9f9f9;
             color: #333;
+            position: relative;
+            background-image: url('logo.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 300px;
+            opacity: 0.1;
         }
 
         header {
@@ -50,52 +56,22 @@
             text-decoration: underline;
         }
 
-        .logout-btn {
-            color: #FF5722;
-            font-weight: bold;
-        }
-
         main {
             padding: 20px;
             text-align: center;
         }
 
-        .welcome {
-            font-size: 28px;
+        .main-title {
+            font-size: 36px;
             font-weight: bold;
             margin-bottom: 20px;
         }
 
-        .features {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .feature {
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 250px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .feature p {
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .feature a {
-            text-decoration: none;
-            color: #4CAF50;
-            font-weight: bold;
+        .main-description {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         footer {
@@ -105,6 +81,7 @@
             color: white;
             margin-top: 20px;
         }
+
     </style>
 </head>
 <body>
@@ -123,28 +100,8 @@
     </header>
 
     <main>
-        <h1 class="welcome">Bem-vindo ao ColabKids</h1>
-        <p>Facilitando a colaboração entre profissionais, pais e professores para o melhor desenvolvimento das crianças.</p>
-
-        <section class="features">
-            <div class="feature">
-                <h3>Agendamento Simples</h3>
-                <p>Organize e gerencie consultas com facilidade.</p>
-                <a href="appointments.html">Ver mais</a>
-            </div>
-
-            <div class="feature">
-                <h3>Registro de Evolução</h3>
-                <p>Mantenha um histórico detalhado do progresso dos pacientes.</p>
-                <a href="professional_dashboard.html">Ver mais</a>
-            </div>
-
-            <div class="feature">
-                <h3>Comunicação Integrada</h3>
-                <p>Facilite o compartilhamento de informações entre os profissionais.</p>
-                <a href="contact.html">Ver mais</a>
-            </div>
-        </section>
+        <h1 class="main-title">Bem-vindo ao ColabKids!</h1>
+        <p class="main-description">Nossa missão é transformar o diagnóstico e acompanhamento de crianças com dificuldades de comportamento e aprendizado. Explore nossas ferramentas inovadoras e torne a experiência de cuidado mais eficiente e colaborativa.</p>
     </main>
 
     <footer>
