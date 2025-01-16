@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ColabKids - Agendamento</title>
+    <title>ColabKids - Registro de Evolução</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -70,7 +70,7 @@
             font-weight: bold;
         }
 
-        .styled-form input, .styled-form button {
+        .styled-form textarea, .styled-form button {
             display: block;
             margin-top: 5px;
             padding: 10px;
@@ -124,35 +124,32 @@
         </div>
         <nav>
             <ul class="navbar">
-                <li><a href="professional_dashboard.html">Registro de Evolução</a></li>
-                <li><a href="appointments.html" class="active">Agendamento e Consultas</a></li>
+                <li><a href="professional_dashboard.html" class="active">Registro de Evolução</a></li>
+                <li><a href="appointments.html">Agendamento e Consultas</a></li>
                 <li><a href="index.html" class="logout-btn">Logout</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="appointments">
-            <h3 class="section-title">Agendamento e Controle de Consultas</h3>
+        <section class="evolution">
+            <h3 class="section-title">Registro de Evolução do Paciente</h3>
 
-            <form action="#" method="POST" class="appointment-form styled-form">
-                <label for="appointment-patient">Nome do Paciente:</label>
-                <input type="text" id="appointment-patient" name="appointment-patient" required>
+            <form action="#" method="POST" class="styled-form">
+                <label for="evolution-patient">Nome do Paciente:</label>
+                <input type="text" id="evolution-patient" name="evolution-patient" required>
 
-                <label for="appointment-date">Data da Consulta:</label>
-                <input type="date" id="appointment-date" name="appointment-date" required>
+                <label for="session-notes">Anotações da Sessão:</label>
+                <textarea id="session-notes" name="session-notes" rows="5" required></textarea>
 
-                <label for="appointment-time">Hora da Consulta:</label>
-                <input type="time" id="appointment-time" name="appointment-time" required>
-
-                <button type="submit" class="btn primary-btn">Agendar</button>
+                <button type="submit" class="btn primary-btn">Salvar Evolução</button>
             </form>
 
-            <div class="appointment-list">
-                <h4>Consultas Agendadas</h4>
+            <div class="evolution-list">
+                <h4>Histórico de Sessões</h4>
                 <ul class="styled-list">
-                    <li>Paciente: João Silva - Data: 15/01/2025 - Hora: 14:00</li>
-                    <li>Paciente: Maria Oliveira - Data: 16/01/2025 - Hora: 10:00</li>
+                    <li>Paciente: João Silva - 10/01/2025 - Sessão: Melhorias no comportamento em sala de aula.</li>
+                    <li>Paciente: Maria Oliveira - 08/01/2025 - Sessão: Foco em atividades de leitura e escrita.</li>
                 </ul>
             </div>
         </section>
