@@ -3,32 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ColabKids - Home</title>
+    <title>ColabKids - Início</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar li {
+            display: inline;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar a.active {
+            text-decoration: underline;
+        }
+
+        .logout-btn {
+            color: #FF5722;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .welcome {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 250px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .feature a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>ColabKids</h1>
+            <img src="logo.png" alt="ColabKids Logo">
         </div>
-        <div class="login">
-            <a href="login.html" class="login-btn">Login</a>
-        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="appointments.html">Agendamentos</a></li>
+                <li><a href="professional_dashboard.html">Evolução</a></li>
+                <li><a href="index.html" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="welcome">
-            <h2>Bem-vindo ao ColabKids</h2>
-            <p>A plataforma inovadora para diagnósticos e apoio no desenvolvimento infantil.</p>
-        </section>
+        <h1 class="welcome">Bem-vindo ao ColabKids</h1>
+        <p>Facilitando a colaboração entre profissionais, pais e professores para o melhor desenvolvimento das crianças.</p>
 
         <section class="features">
-            <h3>Recursos Principais</h3>
-            <ul>
-                <li>Centralização de dados de diagnósticos.</li>
-                <li>Colaboração entre especialistas, pais e professores.</li>
-                <li>Acompanhamento do progresso infantil.</li>
-            </ul>
+            <div class="feature">
+                <h3>Agendamento Simples</h3>
+                <p>Organize e gerencie consultas com facilidade.</p>
+                <a href="appointments.html">Ver mais</a>
+            </div>
+
+            <div class="feature">
+                <h3>Registro de Evolução</h3>
+                <p>Mantenha um histórico detalhado do progresso dos pacientes.</p>
+                <a href="professional_dashboard.html">Ver mais</a>
+            </div>
+
+            <div class="feature">
+                <h3>Comunicação Integrada</h3>
+                <p>Facilite o compartilhamento de informações entre os profissionais.</p>
+                <a href="contact.html">Ver mais</a>
+            </div>
         </section>
     </main>
 
