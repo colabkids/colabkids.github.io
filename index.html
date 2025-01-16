@@ -85,6 +85,24 @@
             margin: 0 auto;
         }
 
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .image-grid a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .image-grid img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
         footer {
             text-align: center;
             padding: 10px 0;
@@ -92,6 +110,7 @@
             color: white;
             margin-top: 20px;
         }
+
     </style>
 </head>
 <body>
@@ -112,6 +131,25 @@
     <main>
         <h1 class="main-title">Bem-vindo ao ColabKids!</h1>
         <p class="main-description">Nossa missão é transformar o diagnóstico e acompanhamento de crianças com dificuldades de comportamento e aprendizado. Explore nossas ferramentas inovadoras e torne a experiência de cuidado mais eficiente e colaborativa.</p>
+
+        <div class="image-grid">
+            <a href="https://www.unicef.org" target="_blank">
+                <img src="https://via.placeholder.com/200" alt="Apoio Infantil">
+                <p>Apoio Infantil</p>
+            </a>
+            <a href="https://www.apaesp.org.br" target="_blank">
+                <img src="https://via.placeholder.com/200" alt="Educação Inclusiva">
+                <p>Educação Inclusiva</p>
+            </a>
+            <a href="https://www.who.int" target="_blank">
+                <img src="https://via.placeholder.com/200" alt="Saúde Mental">
+                <p>Saúde Mental</p>
+            </a>
+            <a href="https://www.childmind.org" target="_blank">
+                <img src="https://via.placeholder.com/200" alt="Dicas para Pais">
+                <p>Dicas para Pais</p>
+            </a>
+        </div>
     </main>
 
     <footer>
