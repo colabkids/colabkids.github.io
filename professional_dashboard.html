@@ -3,42 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ColabKids - Profissional</title>
+    <title>ColabKids - Evolução do Paciente</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar li {
+            display: inline;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .navbar a.active {
+            text-decoration: underline;
+        }
+
+        .logout-btn {
+            color: #FF5722;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-container label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .form-container textarea {
+            width: 100%;
+            height: 150px;
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        .form-container button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>ColabKids</h1>
+            <img src="logo.png" alt="ColabKids Logo">
         </div>
         <nav>
-            <ul>
-                <li><a href="professional_dashboard.html">Registro de Evolução</a></li>
-                <li><a href="appointments.html">Agendamento e Consultas</a></li>
+            <ul class="navbar">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="appointments.html">Agendamentos</a></li>
+                <li><a href="professional_dashboard.html" class="active">Evolução</a></li>
                 <li><a href="index.html" class="logout-btn">Logout</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="dashboard">
-            <h2>Painel do Profissional</h2>
+        <h1 class="page-title">Evolução do Paciente</h1>
 
-            <form action="#" method="POST" class="session-form">
-                <h3>Registrar Evolução do Paciente</h3>
-
+        <div class="form-container">
+            <form action="#" method="POST">
                 <label for="patient-name">Nome do Paciente:</label>
                 <input type="text" id="patient-name" name="patient-name" required>
 
-                <label for="session-date">Data da Sessão:</label>
-                <input type="date" id="session-date" name="session-date" required>
+                <label for="session-notes">Anotações da Sessão:</label>
+                <textarea id="session-notes" name="session-notes" required></textarea>
 
-                <label for="session-notes">Notas da Sessão:</label>
-                <textarea id="session-notes" name="session-notes" rows="5" required></textarea>
+                <label for="next-steps">Próximos Passos:</label>
+                <textarea id="next-steps" name="next-steps" required></textarea>
 
-                <button type="submit" class="btn">Salvar</button>
+                <button type="submit">Salvar Evolução</button>
             </form>
-        </section>
+        </div>
     </main>
 
     <footer>
