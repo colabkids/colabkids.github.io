@@ -6,6 +6,85 @@
     <title>Teleconsultas - ColabKids</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('logo.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+            opacity: 0.25;
+            z-index: -1;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .nav-links a:hover {
+            background-color: #45a049;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
         .teleconsultas-container {
             max-width: 1200px;
             margin: 50px auto;
@@ -14,24 +93,29 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .teleconsultas-header {
             text-align: center;
             margin-bottom: 30px;
         }
+
         .teleconsultas-header h1 {
             color: #4CAF50;
             font-size: 2.5em;
         }
+
         .teleconsultas-header p {
             font-size: 1.2em;
             color: #555;
         }
+
         .consult-options {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
         }
+
         .consult-card {
             background-color: #f9f9f9;
             border: 1px solid #ddd;
@@ -41,14 +125,17 @@
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .consult-card h3 {
             color: #333;
             margin-bottom: 10px;
         }
+
         .consult-card p {
             color: #666;
             margin-bottom: 15px;
         }
+
         .consult-card button {
             background-color: #4CAF50;
             color: white;
@@ -58,8 +145,29 @@
             cursor: pointer;
             font-size: 1em;
         }
+
         .consult-card button:hover {
             background-color: #45a049;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            main {
+                padding: 15px;
+            }
         }
     </style>
 </head>
