@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Profissional - ColabKids</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('./logo.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .logout {
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: 2px solid #4CAF50;
+            color: #4CAF50;
+            transition: all 0.3s;
+        }
+
+        .logout:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        textarea, select, button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            main {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./logo.png" alt="ColabKids Logo">
+        </div>
+        <a href="index.html" class="logout">Voltar</a>
+    </header>
+
+    <main>
+        <h1>Painel do Profissional</h1>
+
+        <section>
+            <h2>Registro de Evolução do Paciente</h2>
+            <form>
+                <label for="patient-name">Nome do Paciente:</label>
+                <select id="patient-name" name="patient-name">
+                    <option value="">Selecione</option>
+                    <option value="patient1">Paciente 1</option>
+                    <option value="patient2">Paciente 2</option>
+                    <option value="patient3">Paciente 3</option>
+                </select>
+
+                <label for="session-notes">Notas da Sessão:</label>
+                <textarea id="session-notes" name="session-notes" rows="5" placeholder="Descreva a evolução do paciente..."></textarea>
+
+                <button type="submit">Salvar Registro</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Produção de Relatórios</h2>
+            <p>Acesse ou produza relatórios detalhados para os pacientes:</p>
+            <form>
+                <label for="select-report">Selecionar Paciente:</label>
+                <select id="select-report" name="select-report">
+                    <option value="">Selecione</option>
+                    <option value="patient1">Paciente 1</option>
+                    <option value="patient2">Paciente 2</option>
+                    <option value="patient3">Paciente 3</option>
+                </select>
+                <button type="submit">Produzir Relatório</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Acessar Registros dos Professores</h2>
+            <p>Consulte informações registradas pelos professores:</p>
+            <button onclick="location.href='teacher_records.html'">Ver Registros</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ColabKids. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
