@@ -98,6 +98,27 @@
             width: 100%;
         }
 
+        textarea, select, button, input {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 24px;
@@ -135,11 +156,37 @@
             </div>
         </section>
 
-        <section class="cta-section">
-            <h2>Comece a Usar</h2>
-            <p>Otimize a gestão de consultas e melhore a experiência dos usuários.</p>
-            <button class="cta-button" onclick="window.location.href='professional.html'">Acessar Agenda</button>
+        <section>
+            <h2>Agendar Consulta</h2>
+            <form>
+                <label for="appointment-date">Data da Consulta:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+
+                <label for="appointment-time">Horário da Consulta:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+
+                <label for="professional-name">Nome do Profissional:</label>
+                <input type="text" id="professional-name" name="professional-name" required>
+
+                <label for="patient-name">Nome do Paciente:</label>
+                <input type="text" id="patient-name" name="patient-name" required>
+
+                <label for="details">Detalhes:</label>
+                <textarea id="details" name="details" rows="4" placeholder="Insira quaisquer detalhes adicionais..."></textarea>
+
+                <button type="submit">Agendar Consulta</button>
+            </form>
         </section>
+
+        <section>
+            <h2>Verificar Agendamentos</h2>
+            <form>
+                <label for="check-appointments">Digite o Nome do Paciente:</label>
+                <input type="text" id="check-appointments" name="check-appointments" required>
+                <button type="submit">Verificar Agendamentos</button>
+            </form>
+        </section>
+
     </main>
 
     <footer>
