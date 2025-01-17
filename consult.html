@@ -23,7 +23,7 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-image: url('logo.png');
+            background-image: url('./logo.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: 50%;
@@ -41,22 +41,27 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .logo {
+        .logo img {
             height: 40px;
         }
 
-        .nav-links a {
+        .logout {
+            font-size: 16px;
             text-decoration: none;
             color: white;
-            background-color: #4CAF50;
+            background-color: white;
             padding: 10px 15px;
             border-radius: 5px;
             font-weight: bold;
-            margin-right: 10px;
+            border: 2px solid #4CAF50;
+            color: #4CAF50;
+            transition: all 0.3s;
+            margin-right: 30px;
         }
 
-        .nav-links a:hover {
-            background-color: #45a049;
+        .logout:hover {
+            background-color: #4CAF50;
+            color: white;
         }
 
         main {
@@ -173,23 +178,34 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="logo.png" alt="ColabKids Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="login.html">Login</a></li>
-            </ul>
-        </nav>
+        <div class="logo">
+            <img src="./logo.png" alt="ColabKids Logo">
+        </div>
+        <a href="index.html" class="logout">Logout</a>
     </header>
 
     <main>
+        <h1>Teleconsultas</h1>
+        <p>Conecte-se com especialistas em tempo real e garanta o melhor suporte para o desenvolvimento infantil.</p>
+
         <section class="teleconsultas-container">
             <div class="teleconsultas-header">
-                <h1>Teleconsultas</h1>
-                <p>Conecte-se com especialistas em tempo real e garanta o melhor suporte para o desenvolvimento infantil.</p>
+                <h2>Funcionalidades</h2>
+                <ul>
+                    <li>Visualize as consultas agendadas em um calendário intuitivo.</li>
+                    <li>Adicione, edite ou cancele compromissos com facilidade.</li>
+                    <li>Envie lembretes automáticos para pacientes e profissionais.</li>
+                    <li>Integração com teleconsultas para maior conveniência.</li>
+                </ul>
+
+                <div class="calendar-container">
+                    <img src="calendar-placeholder.png" alt="Exemplo de calendário integrado" class="calendar-image">
+                </div>
             </div>
+        </section>
+
+        <section>
+            <h2>Consultas Disponíveis</h2>
             <div class="consult-options">
                 <div class="consult-card">
                     <h3>Consulta com Psicólogo</h3>
