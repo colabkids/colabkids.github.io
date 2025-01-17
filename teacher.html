@@ -90,6 +90,10 @@
             margin-bottom: 10px;
         }
 
+        .info {
+            margin-bottom: 10px;
+        }
+
         footer {
             text-align: center;
             padding: 10px 0;
@@ -125,14 +129,20 @@
         <section>
             <h2>Registrar Dados do Aluno</h2>
             <form>
-                <label for="student-name">Nome do Aluno:</label>
-                <input type="text" id="student-name" name="student-name" required>
+                <div class="info">
+                    <label for="student-name">Nome do Aluno:</label>
+                    <input type="text" id="student-name" name="student-name" required>
+                </div>
 
-                <label for="class-details">Turma/Detalhes:</label>
-                <input type="text" id="class-details" name="class-details" required>
+                <div class="info">
+                    <label for="class-details">Turma/Detalhes:</label>
+                    <input type="text" id="class-details" name="class-details" required>
+                </div>
 
-                <label for="progress-notes">Anotações de Progresso:</label>
-                <textarea id="progress-notes" name="progress-notes" rows="5" required></textarea>
+                <div class="info">
+                    <label for="progress-notes">Anotações de Progresso:</label>
+                    <textarea id="progress-notes" name="progress-notes" rows="5" required></textarea>
+                </div>
 
                 <button type="submit" class="logout" style="margin-top: 10px;">Salvar</button>
             </form>
@@ -142,13 +152,16 @@
             <h2>Consultar Relatórios Médicos</h2>
             <p>Selecione o aluno para visualizar os relatórios disponíveis:</p>
             <form>
-                <label for="select-student">Selecionar Aluno:</label>
-                <select id="select-student" name="select-student">
-                    <option value="">Selecione</option>
-                    <option value="student1">Aluno 1</option>
-                    <option value="student2">Aluno 2</option>
-                    <option value="student3">Aluno 3</option>
-                </select>
+                <div class="info">
+                    <label for="select-student">Selecionar Aluno:</label>
+                    <select id="select-student" name="select-student">
+                        <option value="">Selecione</option>
+                        <option value="student1">Aluno 1</option>
+                        <option value="student2">Aluno 2</option>
+                        <option value="student3">Aluno 3</option>
+                    </select>
+                </div>
+
                 <button type="submit" class="logout" style="margin-top: 10px;">Visualizar Relatório</button>
             </form>
         </section>
