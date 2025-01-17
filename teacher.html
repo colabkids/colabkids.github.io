@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel dos Professores - ColabKids</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('./logo.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 50%;
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4CAF50;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .logout {
+            font-size: 16px;
+            text-decoration: none;
+            color: white;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: 2px solid #4CAF50;
+            color: #4CAF50;
+            transition: all 0.3s;
+        }
+
+        .logout:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            main {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./logo.png" alt="ColabKids Logo">
+        </div>
+        <a href="index.html" class="logout">Voltar</a>
+    </header>
+
+    <main>
+        <h1>Painel dos Professores</h1>
+
+        <section>
+            <h2>Registrar Dados do Aluno</h2>
+            <form>
+                <label for="student-name">Nome do Aluno:</label>
+                <input type="text" id="student-name" name="student-name" required>
+
+                <label for="class-details">Turma/Detalhes:</label>
+                <input type="text" id="class-details" name="class-details" required>
+
+                <label for="progress-notes">Anotações de Progresso:</label>
+                <textarea id="progress-notes" name="progress-notes" rows="5" required></textarea>
+
+                <button type="submit" class="logout" style="margin-top: 10px;">Salvar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Consultar Relatórios Médicos</h2>
+            <p>Selecione o aluno para visualizar os relatórios disponíveis:</p>
+            <form>
+                <label for="select-student">Selecionar Aluno:</label>
+                <select id="select-student" name="select-student">
+                    <option value="">Selecione</option>
+                    <option value="student1">Aluno 1</option>
+                    <option value="student2">Aluno 2</option>
+                    <option value="student3">Aluno 3</option>
+                </select>
+                <button type="submit" class="logout" style="margin-top: 10px;">Visualizar Relatório</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ColabKids. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
