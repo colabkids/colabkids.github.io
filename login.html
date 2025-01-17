@@ -157,27 +157,27 @@
         </div>
         <a href="index.html" class="back-home">Voltar</a>
     </header>
+	
+	    <main>
+        <div class="login-container">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <label for="userType">Selecione seu perfil:</label>
+                <select id="userType" name="userType">
+                    <option value="parent">Pais</option>
+                    <option value="professional">Profissionais de Saúde</option>
+                    <option value="teacher">Professores</option>
+                </select>
 
-    <main>
-		<div class="login-container">
-			<h1>Login</h1>
-			<form action="dashboard.html" method="post">
-				<label for="user-type">Selecione o tipo de usuário:</label>
-				<select id="user-type" name="user-type" required>
-					<option value="parent">Pais</option>
-					<option value="professional">Profissionais de Saúde</option>
-					<option value="teacher">Professores</option>
-				</select>
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
 
-				<label for="username">Usuário:</label>
-				<input type="text" id="username" name="username" placeholder="Digite seu usuário" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
 
-				<label for="password">Senha:</label>
-				<input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-
-				<button type="button" onclick="handleLogin()">Entrar</button>
-			</form>
-       </div>
+                <button type="button" onclick="handleLogin()">Entrar</button>
+            </form>
+        </div>
     </main>
     <footer>
         <p>© 2025 ColabKids. Todos os direitos reservados.</p>
@@ -198,4 +198,3 @@
     </script>
 </body>
 </html>
-
